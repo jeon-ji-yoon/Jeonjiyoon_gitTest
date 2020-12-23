@@ -27,8 +27,7 @@ void quickSort(int *data, int start, int end){
 			temp = data[key];
 			data[key] = data[j];
 			data[j] = temp;
-		} 
-		else{
+		} else{
 			//data[i] 와 data[j]를 스왑한다
 			temp = data[ i ];
 			data[ i ] = data[j];
@@ -45,11 +44,11 @@ void quickSort(int *data, int start, int end){
 }
 
 int main(void){
-	quickSort(data, 0, number -1);
+	quickSort(data, 0, 9 );
 	
 	int i;
 	for(i=0; i<10; i++ ){
-		printf("%d", data);
+		printf("%d", data[i]);
 	}
 	return 0;
 }
