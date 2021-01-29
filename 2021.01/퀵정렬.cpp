@@ -4,9 +4,9 @@ int data[10]={1,10,5,8,7,6,4,3,2,9};
 
 void quickSort(int *data, int start, int end){
 	if(start>=end){
-		return; //È®ÀÎÀÌ ÇÊ¿äÇÏ´Ù..... 
+		return; //í™•ì¸ì´ í•„ìš”í•˜ë‹¤..... 
 	}
-	int i, j, key, temp; //key°ªÀÌ pivot°ªÀÌ¶ó°í ÇÑ´Ù
+	int i, j, key, temp; //keyê°’ì´ pivotê°’ì´ë¼ê³  í•œë‹¤
 	key = start;
 	i = start +1;
 	j = end;
@@ -20,15 +20,15 @@ void quickSort(int *data, int start, int end){
 		}
 		
 		
-		//Àû´çÇÑ ¼ö°¡ i¿Í j ¿¢ ÀúÀåµÇÀÖÀ»°ÍÀÌ´Ù 
+		//ì ë‹¹í•œ ìˆ˜ê°€ iì™€ j ì—‘ ì €ì¥ë˜ìˆì„ê²ƒì´ë‹¤ 
 		
 		if(i > j){
-			//   data[key] ¿Í data[j]¸¦  ½º¿ÒÇÑ´Ù 
+			//   data[key] ì™€ data[j]ë¥¼  ìŠ¤ì™‘í•œë‹¤ 
 			temp = data[key];
 			data[key] = data[j];
 			data[j] = temp;
 		} else{
-			//data[i] ¿Í data[j]¸¦ ½º¿ÒÇÑ´Ù
+			//data[i] ì™€ data[j]ë¥¼ ìŠ¤ì™‘í•œë‹¤
 			temp = data[ i ];
 			data[ i ] = data[j];
 			data[j] = temp; 
@@ -36,8 +36,8 @@ void quickSort(int *data, int start, int end){
 		
 		
 	} 
-	 //1)¿©±â±îÁö ½ÇÇàµÇ¸é ¹è¿­ÀÌ  data[key] '¿´´ø' °ªÀ» ±âÁØÀ¸·Î  µÎ ºÎºĞÀ¸·Î ³ª´µ°ÔµÈ´Ù 
-	 //2)µÎºÎºĞÀ¸·Î ³ª´µ¾ú´Âµ¥ °¢°¢ÀÇ ºÎºĞ¿¡ ´ëÇØ¼­ ´Ù½Ã quickSortÇÔ¼ö¸¦ ½ÇÇàÇÑ´Ù.....   
+	 //1)ì—¬ê¸°ê¹Œì§€ ì‹¤í–‰ë˜ë©´ ë°°ì—´ì´  data[key] 'ì˜€ë˜' ê°’ì„ ê¸°ì¤€ìœ¼ë¡œ  ë‘ ë¶€ë¶„ìœ¼ë¡œ ë‚˜ë‰˜ê²Œëœë‹¤ 
+	 //2)ë‘ë¶€ë¶„ìœ¼ë¡œ ë‚˜ë‰˜ì—ˆëŠ”ë° ê°ê°ì˜ ë¶€ë¶„ì— ëŒ€í•´ì„œ ë‹¤ì‹œ quickSortí•¨ìˆ˜ë¥¼ ì‹¤í–‰í•œë‹¤.....   
 	 
 	quickSort(data, start, j-1 );
 	quickSort(data, j+1, end) ;
